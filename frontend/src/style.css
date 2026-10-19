@@ -1,0 +1,61 @@
+:root {
+  --bg: #07070f;
+  --text: #f2f2f8;
+  --muted: #8f8fa8;
+  --accent: #00f5d4;
+  --accent2: #9b5de5;
+  --border: rgba(255, 255, 255, 0.1);
+  --glass: rgba(255, 255, 255, 0.04);
+  --font: 'Outfit', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  background: radial-gradient(800px 400px at 20% -10%, var(--glow), transparent), var(--bg);
+  color: var(--text);
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--accent2), #6b3fa0);
+  color: #fff;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--muted);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.mono { font-family: var(--mono); font-size: 0.82rem; }
